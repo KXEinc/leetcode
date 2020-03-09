@@ -76,31 +76,31 @@
 // //
 // // console.log(countingValleys(8, 'UDDDUDUU'));
 
-function ListNode(val) {
-  this.val = val;
-  this.next = null;
-}
-
-let l1 = {
-  val: 1,
-  next: {
-    val: 3,
-    next: {
-      val: 5,
-      next: null
-    }
-  }
-};
-let l2 = {
-  val: 2,
-  next: {
-    val: 4,
-    next: {
-      val: 6,
-      next: null
-    }
-  }
-};
+// function ListNode(val) {
+//   this.val = val;
+//   this.next = null;
+// }
+//
+// let l1 = {
+//   val: 1,
+//   next: {
+//     val: 3,
+//     next: {
+//       val: 5,
+//       next: null
+//     }
+//   }
+// };
+// let l2 = {
+//   val: 2,
+//   next: {
+//     val: 4,
+//     next: {
+//       val: 6,
+//       next: null
+//     }
+//   }
+// };
 
 // const mergeTwoLists = function(l1, l2) {
 //   let mergedList = new ListNode();
@@ -197,9 +197,26 @@ let l2 = {
 
 // console.log(hourglassSum(arr));
 
-function rotLeft(a, d) {
-  return a.slice(d).concat(a.slice(0, d));
+// function rotLeft(a, d) {
+//   return a.slice(d).concat(a.slice(0, d));
+// }
+//
+// console.log(rotLeft([1, 2, 3, 4, 5], 4));
+
+function minimumBribes(q) {
+  let count = 0;
+  let err = "";
+  q = q.map((el, i) => {
+    return Math.abs(el - i - 1);
+  });
+  return q
 }
 
-console.log(rotLeft([1, 2, 3, 4, 5], 4));
+const arr = [1, 2, 5, 3, 7, 8, 6, 4];
+const arr1 = [5, 1, 2, 3, 7, 8, 6, 4];
+const arr2 = [2, 5, 1, 3, 4];
 
+
+console.log(minimumBribes(arr));
+console.log(minimumBribes(arr1));
+console.log(minimumBribes(arr2));
